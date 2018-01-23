@@ -9,7 +9,7 @@ class CreateRooms < ActiveRecord::Migration
       t.text :address
       t.float :latitude
       t.float :longitude
-      t.boolean :is_authorized
+      t.boolean :is_authorized, default: false
       t.integer :city_id
       t.integer :user_id
 

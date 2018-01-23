@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180123210607) do
+ActiveRecord::Schema.define(version: 20180123234309) do
+
+  create_table "amenities", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "amenity_rooms", force: :cascade do |t|
+    t.integer  "amenity_id"
+    t.integer  "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "permissions", force: :cascade do |t|
     t.integer  "user_id"
@@ -24,6 +44,22 @@ ActiveRecord::Schema.define(version: 20180123210607) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.float    "price"
+    t.text     "rules"
+    t.integer  "minimum_days"
+    t.text     "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "is_authorized", default: false
+    t.integer  "city_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
   create_table "users", force: :cascade do |t|
