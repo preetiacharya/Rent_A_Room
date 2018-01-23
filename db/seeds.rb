@@ -9,3 +9,6 @@
 Role.create(name: 'admin')
 Role.create(name: 'host')
 Role.create(name: 'guest')
+
+User.create(email: 'admin@gmail.com', password: "secret123")
+Permission.create(user_id: 1, role_id: 1)

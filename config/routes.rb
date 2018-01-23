@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :amenities
+  resources :cities
   devise_for :users
   resources :roles
   # The priority is based upon order of creation: first created -> highest priority.

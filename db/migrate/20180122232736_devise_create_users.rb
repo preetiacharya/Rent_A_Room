@@ -36,7 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string    :email
       t.string    :mobile_number
       t.string    :password
-      t.boolean   :is_guest, default: true
+      t.boolean   :is_admin, default: false
 
       t.timestamps null: false
     end
