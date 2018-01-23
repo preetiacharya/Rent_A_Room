@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @room.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @room.price %>
+</p>
+
+<p>
+  <strong>Rules:</strong>
+  <%= @room.rules %>
+</p>
+
+<p>
+  <strong>Minimum days:</strong>
+  <%= @room.minimum_days %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @room.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @room.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @room.longitude %>
+</p>
+
+<p>
+  <strong>Is authorized:</strong>
+  <%= @room.is_authorized %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @room.city_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @room.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

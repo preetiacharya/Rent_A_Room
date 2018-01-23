@@ -19,5 +19,4 @@ class User < ActiveRecord::Base
     Permission.create(user_id: self.id, role_id: Role.find_by(name: “user).id)
   end
 
-
 end
